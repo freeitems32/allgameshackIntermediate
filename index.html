@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HUMAN VERIFICATION</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <meta name="robots" content="noindex, nofollow">
-
     <style>
       #main {
-        background: url("/mainbg.webp") no-repeat center/cover;
+        background: url("/mainbg.png") no-repeat center/cover;
       }
 
       /* Overlay and iframe styling */
@@ -33,6 +31,9 @@
         border: none;
         background: transparent; /* Ensure iframe background is transparent */
       }
+      #button1 {
+        box-shadow: 0 0 10px rgb(81, 145, 255);
+      }
     </style>
     <meta name="robots" content="noindex, nofollow" />
   </head>
@@ -43,17 +44,23 @@
       class="h-screen flex justify-center items-center text-center relative"
     >
       <div
-        class="absolute text-white bg-black rounded-lg p-5 lg:w-2/6 w-fit mx-5"
+        class="absolute text-white bg-black/80 rounded-lg p-5 lg:w-2/6 w-fit mx-5"
       >
         <h1 class="mb-5 text-2xl font-bold flex items-center justify-center">
           !HUMAN VERIFICATION! :(
         </h1>
 
         <p>
-          Click the button below to verify. <br />After verification check your
-          game account for free reward as selected.
+          Enter your in-game email and click the button below to verify. Once
+          verified, check your game account for the free rewards you selected.
         </p>
+        <input
+          type="text"
+          class="rounded py-2 px-3 w-3/4 mt-5 text-black"
+          placeholder="In-game Email or UserID"
+        /><br />
         <button
+          id="button1"
           class="bg-blue-600 px-5 py-2 mt-5 hover:bg-white hover:text-black"
           onclick="verify()"
         >
